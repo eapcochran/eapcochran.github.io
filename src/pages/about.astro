@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { aboutMetrics, aboutSkills, aboutStrengths } from '../data/site';
+---
+
+<Layout title="About | ewen.dev" description="About page for a staff software engineer focused on technical depth, product judgment, and team clarity.">
+  <section class="section section--first">
+    <div class="narrow-container">
+      <div class="about-heading">
+        <p class="eyebrow">About</p>
+        <h2>About Me</h2>
+        <p class="lead">
+          I work at the intersection of technical depth, product judgment, and team clarity. My
+          best work happens where systems need to scale and people need confidence.
+        </p>
+      </div>
+
+      <div class="card info-prose" style="margin-top: 1.75rem;">
+        <p>
+          I’m a Staff Software Engineer with over 10 years of experience building scalable systems
+          and leading engineering teams. I’m passionate about creating elegant solutions to complex
+          problems and mentoring the next generation of engineers.
+        </p>
+        <p style="margin-top: 1rem;">
+          My expertise spans full-stack development, distributed systems, and cloud architecture. I
+          thrive in fast-paced environments where I can drive technical excellence and foster a
+          culture of continuous learning.
+        </p>
+      </div>
+
+      <div class="metric-grid" style="margin-top: 1.1rem;">
+        {aboutMetrics.map((metric) => (
+          <article class="card metric-card">
+            <strong>{metric.value}</strong>
+            <p>{metric.label}</p>
+          </article>
+        ))}
+      </div>
+
+      <div class="split-grid" style="margin-top: 1.1rem;">
+        {aboutStrengths.map((item) => (
+          <article class="card panel">
+            <div class="icon-chip">
+              {item.icon === 'code' && (
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8.5 8.5-4 3.5 4 3.5 1-1.16L6.83 12l2.67-2.34L8.5 8.5Zm7 0-1 1.16L17.17 12l-2.67 2.34 1 1.16 4-3.5-4-3.5Zm-2.68-2.14-3 11 1.46.4 3-11-1.46-.4Z"></path></svg>
+              )}
+              {item.icon === 'team' && (
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm8 1a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5ZM2.5 18.5a4.5 4.5 0 0 1 9 0v.5h-9v-.5Zm10 0A4 4 0 0 1 20 16v3h-7.5v-.5Z"></path></svg>
+              )}
+              {item.icon === 'rocket' && (
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3c3.3 0 6 2.7 6 6 0 1.87-.86 3.54-2.2 4.64l-1.57 5.48-3.98-3.98-3.98 3.98-1.57-5.48A5.96 5.96 0 0 1 4 9c0-3.3 2.7-6 6-6h4Zm-2 4.5A1.5 1.5 0 1 0 12 10.5a1.5 1.5 0 0 0 0-3Z"></path></svg>
+              )}
+              {item.icon === 'badge' && (
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 14.4 5l3.44-.4.4 3.44L20.5 10 18 12.4l.4 3.44-3.44.4L12 18.5 9.6 16l-3.44.4-.4-3.44L3.5 10 6 7.6l-.4-3.44L9.04 4 12 2.5Zm0 5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"></path></svg>
+              )}
+            </div>
+            <h3 style="margin-top: 0.9rem;">{item.title}</h3>
+            <p style="margin-top: 0.55rem;">{item.body}</p>
+          </article>
+        ))}
+      </div>
+
+      <section class="card skills-card" style="margin-top: 1.3rem;">
+        <h3>Skills & Technologies</h3>
+        <p style="margin-top: 0.45rem;">A mix of hands-on implementation and higher-level system design work.</p>
+        <div class="skills-grid">
+          {Object.entries(aboutSkills).map(([group, items]) => (
+            <div class="skills-group">
+              <h4>{group}</h4>
+              <div class="skills-tags">
+                {items.map((skill) => (
+                  <span class="skill-tag">{skill}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { homeCards, homeHighlights } from '../data/site';
+---
+
+<Layout
+  title="ewen.dev | Staff-level engineering leadership"
+  description="Portfolio homepage for a staff software engineer focused on systems, product judgment, and team execution."
+>
+  <section class="section section--first">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow-pill">Staff-level engineering leadership</p>
+        <h1>I build dependable software systems and help engineering teams deliver with confidence.</h1>
+        <p class="lead">
+          From platform architecture to team execution, I focus on building products that scale
+          cleanly, feel thoughtful to use, and stay maintainable under real-world pressure.
+        </p>
+
+        <div class="button-row">
+          <a class="button button--primary" href="/projects">
+            View selected work <span class="button__icon">→</span>
+          </a>
+          <a class="button button--secondary" href="/contact">Start a conversation</a>
+        </div>
+
+        <div class="highlight-row">
+          {homeHighlights.map((item) => (
+            <div class="pill-card">
+              <p>{item}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <aside class="card feature-list">
+        <p class="eyebrow">What I Bring</p>
+        {homeCards.map((card) => (
+          <div class="feature-list__item">
+            <div class="icon-chip">
+              {card.icon === 'stack' && (
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 7 4-7 4-7-4 7-4Zm-7 7 7 4 7-4v4l-7 4-7-4v-4Zm0 7 7 4 7-4v4l-7 4-7-4v-4Z"></path></svg>
+              )}
+              {card.icon === 'team' && (
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm8 1a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5ZM2.5 18.5a4.5 4.5 0 0 1 9 0v.5h-9v-.5Zm10 0A4 4 0 0 1 20 16v3h-7.5v-.5Z"></path></svg>
+              )}
+              {card.icon === 'briefcase' && (
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5A2.5 2.5 0 0 1 10.5 3h3A2.5 2.5 0 0 1 16 5.5V7h4A1.5 1.5 0 0 1 21.5 8.5v10A1.5 1.5 0 0 1 20 20H4A1.5 1.5 0 0 1 2.5 18.5v-10A1.5 1.5 0 0 1 4 7h4V5.5ZM9.5 7h5V5.5a1 1 0 0 0-1-1h-3a1 1 0 0 0-1 1V7Z"></path></svg>
+              )}
+            </div>
+            <div>
+              <h3>{card.title}</h3>
+              <p>{card.body}</p>
+            </div>
+          </div>
+        ))}
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Explore Next</p>
+        <h2>Start with the section that best matches your goal.</h2>
+      </div>
+
+      <div class="explore-grid">
+        <article class="card panel">
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5A2.5 2.5 0 0 1 10.5 3h3A2.5 2.5 0 0 1 16 5.5V7h4A1.5 1.5 0 0 1 21.5 8.5v10A1.5 1.5 0 0 1 20 20H4A1.5 1.5 0 0 1 2.5 18.5v-10A1.5 1.5 0 0 1 4 7h4V5.5ZM9.5 7h5V5.5a1 1 0 0 0-1-1h-3a1 1 0 0 0-1 1V7Z"></path></svg>
+          </div>
+          <h3>Projects</h3>
+          <p>See how I approach architecture, technical tradeoffs, and delivery across product and platform work.</p>
+          <p><a class="text-link" href="/projects">Review case studies →</a></p>
+        </article>
+
+        <article class="card panel">
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h14A1.5 1.5 0 0 1 20.5 6v12a1.5 1.5 0 0 1-1.5 1.5h-7.5v-6H4.5V6A1.5 1.5 0 0 1 6 4.5Zm0 9.5h5v5l-5-5Z"></path></svg>
+          </div>
+          <h3>Blog</h3>
+          <p>Read practical writing on engineering leadership, architecture decisions, and team effectiveness.</p>
+          <p><a class="text-link" href="/blog">Browse recent posts →</a></p>
+        </article>
+
+        <article class="card panel">
+          <div class="icon-chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 5h3v3h-3V5Zm6 0H19v3h-5.5V5ZM5 10.5h14V19H5v-8.5Zm2 2v4.5h10v-4.5H7Z"></path></svg>
+          </div>
+          <h3>About Me</h3>
+          <p>Get the short version of my experience, strengths, and the kinds of teams I work best with.</p>
+          <p><a class="text-link" href="/about">Learn more →</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>
