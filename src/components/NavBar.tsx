@@ -16,6 +16,14 @@ const navItems: NavItem[] = [
 export default function NavBar({ currentPath }: { currentPath: string }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  const isActivePath = (href: string) => {
+    if (href === '/') {
+      return currentPath === '/';
+    }
+
+    return currentPath === href || currentPath.startsWith(`${href}/`);
+  };
+
   useEffect(() => {
     setIsOpen(false);
   }, [currentPath]);
@@ -56,7 +64,8 @@ export default function NavBar({ currentPath }: { currentPath: string }) {
             <a
               key={item.href}
               href={item.href}
-              className={currentPath === item.href ? 'is-active' : undefined}
+              className={isActivePath(item.href) ? 'is-active' : undefined}
+              aria-current={isActivePath(item.href) ? 'page' : undefined}
             >
               {item.label}
             </a>
@@ -73,7 +82,8 @@ export default function NavBar({ currentPath }: { currentPath: string }) {
               <a
                 key={item.href}
                 href={item.href}
-                className={currentPath === item.href ? 'is-active' : undefined}
+                className={isActivePath(item.href) ? 'is-active' : undefined}
+                aria-current={isActivePath(item.href) ? 'page' : undefined}
               >
                 {item.label}
               </a>

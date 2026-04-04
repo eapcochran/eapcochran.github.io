@@ -31,8 +31,13 @@ import { projects } from '../data/site';
             </div>
             <div class="project-card__links">
               {project.links.map((link) => (
-                <a class={`link-chip ${link === 'Demo' ? 'link-chip--accent' : ''}`} href="/">
-                  {link === 'Code' ? '⌘' : '↗'} {link}
+                <a
+                  class={`link-chip ${link.label === 'Demo' ? 'link-chip--accent' : ''}`}
+                  href={link.href}
+                  target={link.external ? '_blank' : undefined}
+                  rel={link.external ? 'noreferrer' : undefined}
+                >
+                  {link.label === 'Code' ? '⌘' : '↗'} {link.label}
                 </a>
               ))}
             </div>

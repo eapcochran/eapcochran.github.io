@@ -80,7 +80,10 @@ export const projects = [
       "Built a scalable e-commerce platform handling 1M+ daily users. Implemented microservices architecture with Redis caching and PostgreSQL.",
     outcome: 'Improved reliability and reduced response times during peak traffic.',
     tags: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    links: ['Code', 'Demo'],
+    links: [
+      { label: 'Code', href: 'https://github.com/', external: true },
+      { label: 'Demo', href: 'https://example.com/', external: true },
+    ],
   },
   {
     title: 'Real-Time Analytics Dashboard',
@@ -88,7 +91,10 @@ export const projects = [
       'Developed a real-time analytics dashboard for tracking user behavior and business metrics with sub-second latency.',
     outcome: 'Enabled product teams to monitor live metrics without waiting on batch reports.',
     tags: ['TypeScript', 'Python', 'Apache Kafka', 'ClickHouse'],
-    links: ['Code', 'Demo'],
+    links: [
+      { label: 'Code', href: 'https://github.com/', external: true },
+      { label: 'Demo', href: 'https://example.com/', external: true },
+    ],
   },
   {
     title: 'Developer Tools CLI',
@@ -96,7 +102,7 @@ export const projects = [
       'Created a command-line tool to automate common development workflows, improving team productivity by 40%.',
     outcome: 'Shortened onboarding time and standardized recurring engineering tasks.',
     tags: ['Go', 'Docker', 'Kubernetes', 'GitHub Actions'],
-    links: ['Code'],
+    links: [{ label: 'Code', href: 'https://github.com/', external: true }],
   },
   {
     title: 'API Gateway Service',
@@ -104,7 +110,7 @@ export const projects = [
       'Designed and implemented a high-performance API gateway with rate limiting, authentication, and request routing.',
     outcome: 'Centralized auth and observability while simplifying downstream service integrations.',
     tags: ['Go', 'gRPC', 'Envoy', 'Prometheus'],
-    links: ['Code'],
+    links: [{ label: 'Code', href: 'https://github.com/', external: true }],
   },
   {
     title: 'Mobile App Backend',
@@ -112,7 +118,10 @@ export const projects = [
       'Built a robust backend for a mobile application serving 500K+ users with real-time notifications and offline sync.',
     outcome: 'Supported dependable sync behavior across unreliable network conditions.',
     tags: ['Node.js', 'MongoDB', 'WebSocket', 'Firebase'],
-    links: ['Code', 'Demo'],
+    links: [
+      { label: 'Code', href: 'https://github.com/', external: true },
+      { label: 'Demo', href: 'https://example.com/', external: true },
+    ],
   },
   {
     title: 'CI/CD Pipeline Framework',
@@ -120,7 +129,7 @@ export const projects = [
       'Developed a reusable CI/CD framework that reduced deployment times by 60% and improved reliability.',
     outcome: 'Reduced release friction and gave teams more confidence in deployment health.',
     tags: ['GitHub Actions', 'Docker', 'Terraform', 'AWS'],
-    links: ['Code'],
+    links: [{ label: 'Code', href: 'https://github.com/', external: true }],
   },
 ];
 

@@ -54,7 +54,7 @@ const relatedPosts = blogPosts.filter((entry) => entry.slug !== post.slug).slice
         {relatedPosts.map((entry) => (
           <article class="card related-card">
             <p class="eyebrow">{entry.category}</p>
-            <h3>{entry.title}</h3>
+            <h3><a href={`/blog/${entry.slug}`}>{entry.title}</a></h3>
             <p style="margin-top: 0.55rem;">{entry.summary}</p>
           </article>
         ))}

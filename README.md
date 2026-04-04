@@ -24,6 +24,12 @@ npm install
 npm run dev
 ```
 
+To enable contact form submissions with Formspree, create a `.env` file and add:
+
+```sh
+PUBLIC_FORMSPREE_ENDPOINT=https://formspree.io/f/YOUR_FORM_ID
+```
+
 ## Production Build
 
 ```sh
@@ -35,5 +41,5 @@ The static output is generated in `dist/`.
 ## Notes
 
 - Content is currently placeholder content based on the provided mockups.
-- The contact form is set up for layout and validation only. It can be connected to Formspree, Netlify Forms, or another backend later.
+- The contact form is wired for Formspree AJAX submission when `PUBLIC_FORMSPREE_ENDPOINT` is configured.
 - Since this repository is named `eapcochran.github.io`, it is already well-positioned for GitHub Pages user-site hosting at the domain root.
