@@ -35,8 +35,9 @@ const pathname = Astro.url.pathname;
   </head>
   <body>
     <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to main content</a>
       <NavBar client:load currentPath={pathname} />
-      <main class="page-shell">
+      <main class="page-shell" id="main-content">
         <slot />
       </main>
       <SiteFooter />

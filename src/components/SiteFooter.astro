@@ -11,7 +11,12 @@ const socialLinks = [
   <div class="container site-footer__inner">
     <div class="social-row" aria-label="Social links">
       {socialLinks.map((link) => (
-        <a href={link.href} aria-label={link.label} target="_blank" rel="noreferrer">
+        <a
+          href={link.href}
+          aria-label={link.href.startsWith('mailto:') ? link.label : `${link.label} (opens in a new tab)`}
+          target={link.href.startsWith('mailto:') ? undefined : '_blank'}
+          rel={link.href.startsWith('mailto:') ? undefined : 'noreferrer'}
+        >
           {link.icon === 'github' && (
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 2C6.48 2 2 6.58 2 12.22c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.49 0-.24-.01-1.03-.01-1.87-2.78.62-3.37-1.2-3.37-1.2-.45-1.18-1.12-1.49-1.12-1.49-.91-.64.07-.63.07-.63 1.01.07 1.54 1.07 1.54 1.07.89 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.37-2.22-.26-4.55-1.14-4.55-5.1 0-1.13.39-2.05 1.04-2.77-.11-.26-.45-1.3.1-2.72 0 0 .84-.28 2.75 1.06A9.3 9.3 0 0 1 12 6.84c.85 0 1.71.12 2.51.37 1.91-1.34 2.75-1.06 2.75-1.06.55 1.42.2 2.46.1 2.72.65.72 1.04 1.64 1.04 2.77 0 3.97-2.33 4.83-4.56 5.09.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .27.18.59.69.49A10.25 10.25 0 0 0 22 12.22C22 6.58 17.52 2 12 2Z"></path>
