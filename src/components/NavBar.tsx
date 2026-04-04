@@ -63,8 +63,8 @@ export default function NavBar({ currentPath }: { currentPath: string }) {
   return (
     <header className="site-header">
       <div className="container site-header__inner">
-        <a className="site-brand" href="/">
-          ewen.dev
+        <a className="site-brand" href="/" aria-label="ewen.dev home">
+          <img src="/logo-ewen.svg" alt="ewen.dev" />
         </a>
 
         <button
