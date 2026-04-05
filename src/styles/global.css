@@ -324,7 +324,8 @@ p {
 .hero-grid,
 .home-sections,
 .contact-grid,
-.blog-post-grid {
+.blog-post-grid,
+.not-found-shell {
   display: grid;
   gap: 1.4rem;
 }
@@ -332,6 +333,11 @@ p {
 .hero-grid {
   align-items: start;
   grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.9fr);
+}
+
+.not-found-shell {
+  grid-template-columns: 1fr;
+  justify-items: center;
 }
 
 .highlight-row {
@@ -530,6 +536,31 @@ p {
 
 .info-prose {
   padding: 1.7rem;
+}
+
+.not-found-panel {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  width: min(100%, 640px);
+  padding: 2.4rem 2rem;
+  text-align: center;
+}
+
+.not-found-icon {
+  display: grid;
+  place-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 999px;
+  color: var(--accent);
+  background: rgba(242, 134, 85, 0.12);
+}
+
+.not-found-icon svg {
+  width: 2.1rem;
+  height: 2.1rem;
+  fill: currentColor;
 }
 
 .skills-card {
