@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { sectionVisibility } from '../data/site';
 
 type NavItem = {
   href: string;
@@ -8,10 +9,16 @@ type NavItem = {
 const navItems: NavItem[] = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ];
+
+if (sectionVisibility.projects) {
+  navItems.splice(2, 0, { href: '/projects', label: 'Projects' });
+}
+
+if (sectionVisibility.blog) {
+  navItems.splice(sectionVisibility.projects ? 3 : 2, 0, { href: '/blog', label: 'Blog' });
+}
 
 export default function NavBar({ currentPath }: { currentPath: string }) {
   const [isOpen, setIsOpen] = useState(false);

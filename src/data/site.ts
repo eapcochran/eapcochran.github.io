@@ -4,6 +4,11 @@ export type FeatureCard = {
   icon: string;
 };
 
+export const sectionVisibility = {
+  projects: false,
+  blog: false,
+} as const;
+
 export type BlogPost = {
   slug: string;
   category: string;
