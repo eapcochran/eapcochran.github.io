@@ -10,8 +10,7 @@ import { homeCards, homeHighlights, sectionVisibility } from '../data/site';
   <section class="section section--first">
     <div class="container hero-grid">
       <div>
-        <p class="eyebrow-pill">Staff-level engineering leadership</p>
-        <h1>I build dependable software systems and help engineering teams deliver with confidence.</h1>
+        <h1>I build scalable software and help engineering teams navigate complexity.</h1>
         <p class="lead">
           From platform architecture to team execution, I focus on building products that scale
           cleanly, feel thoughtful to use, and stay maintainable under real-world pressure.
@@ -33,7 +32,19 @@ import { homeCards, homeHighlights, sectionVisibility } from '../data/site';
         <div class="highlight-row">
           {homeHighlights.map((item) => (
             <div class="pill-card">
-              <p>{item}</p>
+              <p>
+                {item.includes('Electric AI') ? (
+                  <>
+                    {item.split('Electric AI')[0]}
+                    <a class="text-link" href="https://electric.ai" target="_blank" rel="noreferrer">
+                      Electric AI
+                    </a>
+                    {item.split('Electric AI')[1]}
+                  </>
+                ) : (
+                  item
+                )}
+              </p>
             </div>
           ))}
         </div>

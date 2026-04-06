@@ -20,62 +20,83 @@ export type BlogPost = {
 };
 
 export const homeHighlights = [
-  '10+ years building web platforms and distributed systems',
-  'Leadership across architecture, delivery, and mentoring',
-  'Strong product judgment with a bias for clarity and reliability',
+  'Staff Engineer at Electric AI since June 2022',
+  'Architecture leadership for a new SaaS application',
+  'Hands-on mentorship and support across the engineering organization',
 ];
 
 export const homeCards: FeatureCard[] = [
   {
     icon: 'stack',
-    title: 'Systems that scale',
-    body: 'Architecture decisions grounded in performance, resilience, and maintainability.',
+    title: 'Architecture with follow-through',
+    body: 'I help shape systems at the platform level and stay close enough to the implementation to make them real.',
   },
   {
     icon: 'team',
-    title: 'Teams that ship well',
-    body: 'Cross-functional leadership that improves execution, communication, and code quality.',
+    title: 'A multiplier for teams',
+    body: 'I mentor engineers across the organization and help teams move through technical ambiguity with more clarity.',
   },
   {
     icon: 'briefcase',
-    title: 'Outcomes that matter',
-    body: 'Delivery focused on customer value, operational simplicity, and long-term leverage.',
+    title: 'Product-minded execution',
+    body: 'My work is grounded in building software that is useful, maintainable, and aligned with the business.',
   },
 ];
 
 export const aboutMetrics = [
   { value: '10+', label: 'years building software for product and platform teams' },
-  { value: '0-1', label: 'to scale across greenfield initiatives and existing systems' },
-  { value: 'Staff', label: 'level scope across architecture, execution, and mentoring' },
+  { value: 'Since 2022', label: 'at Electric AI on the architecture team' },
+  { value: 'Staff', label: 'scope across architecture, execution, and engineering leadership' },
+];
+
+export const aboutIntro = [
+  'At Electric AI, I help set technical direction, work through complex architectural decisions, and contribute directly to building a new SaaS application.',
+  'My work spans architecture, execution, and engineering leadership. I contribute to critical initiatives across the company and support engineers through design review, technical guidance, and mentorship.',
 ];
 
 export const aboutStrengths: FeatureCard[] = [
   {
     icon: 'code',
-    title: 'Technical Excellence',
-    body: 'Deep expertise in modern web technologies, distributed systems, and cloud infrastructure.',
+    title: 'Architecture That Holds Up',
+    body: 'I help teams make technical decisions that stand up under growth, change, and the practical realities of shipping software.',
   },
   {
     icon: 'team',
-    title: 'Team Leadership',
-    body: 'Experienced in leading cross-functional teams and mentoring engineers at all levels.',
+    title: 'Leadership Through Clarity',
+    body: 'I give engineers and teams clearer paths through ambiguity by offering direction, feedback, and hands-on technical support.',
   },
   {
     icon: 'rocket',
-    title: 'Product Focus',
-    body: 'Strong track record of delivering high-impact features that drive business value.',
+    title: 'Execution on Critical Work',
+    body: 'I work on key initiatives that matter to the business, from greenfield product development to the systems that support it.',
   },
   {
     icon: 'badge',
-    title: 'Best Practices',
-    body: 'Advocate for clean code, comprehensive testing, and robust CI/CD pipelines.',
+    title: 'Standards That Scale',
+    body: 'I raise the bar through sound engineering practices, strong design habits, and a bias toward maintainable systems.',
   },
 ];
 
 export const aboutSkills = {
-  Core: ['React', 'TypeScript', 'Node.js', 'Python', 'Go'],
-  Platform: ['PostgreSQL', 'MongoDB', 'AWS', 'Docker', 'Kubernetes'],
-  Leadership: ['System Design', 'API Design', 'Microservices', 'CI/CD'],
+  'Languages & Frameworks': [
+    'Python',
+    'Django',
+    'Flask',
+    'FastAPI',
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Vue.js',
+    'Node.js',
+  ],
+  'Cloud & Infrastructure': [
+    'Amazon Web Services',
+    'Google Cloud Platform',
+    'Serverless',
+    'Kubernetes',
+    'Docker',
+  ],
+  'Data & Delivery': ['SQL', 'PostgreSQL', 'NoSQL', 'Git', 'GitHub', 'Agile', 'Scrum', 'Kanban'],
 };
 
 export const projects = [
