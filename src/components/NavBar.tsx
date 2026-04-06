@@ -109,8 +109,6 @@ export default function NavBar({ currentPath }: { currentPath: string }) {
         hidden={!isOpen}
       >
         <div className="container mobile-nav__inner">
-          <p className="mobile-nav__eyebrow">Navigate the site</p>
-          <p className="mobile-nav__hint">Jump between portfolio sections in a clean, touch-friendly layout.</p>
           <nav className="site-nav site-nav--mobile" aria-label="Mobile">
             {navItems.map((item) => (
               <a

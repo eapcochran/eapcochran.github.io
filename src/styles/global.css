@@ -321,6 +321,10 @@ p {
   display: none;
 }
 
+.mobile-nav[hidden] {
+  display: none;
+}
+
 .hero-grid,
 .home-sections,
 .contact-grid,
@@ -755,7 +759,7 @@ p {
     z-index: 1;
   }
 
-  .mobile-nav {
+  .mobile-nav:not([hidden]) {
     position: absolute;
     left: 0;
     right: 0;
