@@ -17,6 +17,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      PUBLIC_FORMSPREE_ENDPOINT: ${{ vars.PUBLIC_FORMSPREE_ENDPOINT || secrets.PUBLIC_FORMSPREE_ENDPOINT }}
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v6
